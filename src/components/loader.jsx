@@ -1,7 +1,7 @@
 function Loader(){
     return(
-        <div className="text-centre text-x1 font-semibold text-gray-600">
-            Loading books...
+        <div className="flex justify items-center py-10">
+            <div className="w-10 h-10 border-4-500 border-t-transparent amimate-spin rounded-full"></div>
         </div>
     )
 }
