@@ -3,6 +3,9 @@ import Loader from "./components/loader"
 import BookList from "./components/booklist"
 import ErrorMessage from "./components/errormessage"
 import SearchBar from "./components/searchbar"
+import SectionTitle from "./components/ui/sectiontitle"
+import Container from "./components/ui/container"
+
 
 
 function App() {
@@ -40,11 +43,11 @@ function App() {
   }, [query])
 
   return (
-    <div className="p-6 max-w-5x1 mx-auto">
+    <Container className="p-6 max-w-5x1 mx-auto">
+
+      <SectionTitle>Book Explorer</SectionTitle>
 
       <SearchBar query={query} setQuery={setQuery}/>
-
-      <h1 className="text-3xl text-center font-bold mb-6">Book Explorer</h1>
 
 
       {loading && <Loader/>}
@@ -59,7 +62,7 @@ function App() {
         <BookList books={books}/>
       )}
 
-    </div>
+    </Container>
   );
 }
 
