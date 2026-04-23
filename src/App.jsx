@@ -26,7 +26,7 @@ function App() {
         setError("")
 
         const res = await fetch(`https://openlibrary.org/search.json?q=${query}`)
-        if(!res) throw new Error("Failed to fetch books")
+        if(!res.ok) throw new Error("Failed to fetch books")
         
         const data = await res.json()
         setBooks(data.docs || [])
